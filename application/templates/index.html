@@ -1,0 +1,21 @@
+<!-- HTML code for the index page containing a text box and a submit button -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text Classification</title>
+		<!-- Add CSS styles for the page -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+		<h1>Text Classification</h1>
+		<form action="/predict" method="post">
+			<label for="text">Diagnosis Text:</label>
+			<!-- The text area for the user to enter text -->
+			<textarea id="text" name="text"></textarea>
+			<button type="submit">Submit</button>
+		</form>
+		<!-- Display the predicted label -->
+		<h2>Predicted Disease Type:</h2>
+		<h2>{{ string }}</h2>
+	</body>
+</html>
